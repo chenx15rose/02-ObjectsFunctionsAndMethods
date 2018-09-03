@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Harry.
+"""  # TONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -22,6 +22,8 @@ import rosegraphics as rg
 
 
 def main():
+    hyp(3, 4)
+    turtlepen('red', 10)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -30,7 +32,7 @@ def main():
 
 ###############################################################################
 #
-# TODO: 3a.  Define a function immediately blow this _TODO_.
+# DONE: 3a.  Define a function immediately blow this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -38,10 +40,14 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
+def hyp(a,b):
+    c = ((a**2)+(b**2))**(1/2)
+    print (c)
+
 
 
 ###############################################################################
@@ -61,7 +67,23 @@ def main():
 #        makes the other SimpleTurtle move BACKWARD 100 pixels.
 #
 #   You may name the function and its parameters whatever you wish.
-#
+
+def turtlepen (color1, thickness1):
+
+
+    window1 = rg.TurtleWindow()
+    turtle1 = rg.SimpleTurtle()
+    turtle1.pen = rg.Pen('green', thickness1)
+    turtle1.forward(100)
+
+
+    turtle2 = rg.SimpleTurtle()
+    turtle2.pen = rg.Pen (color1, 5)
+    turtle2.backward(100)
+
+    window1.close_on_mouse_click()
+
+
 # TODO: 4b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
