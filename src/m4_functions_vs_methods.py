@@ -77,11 +77,10 @@ def main():
     and waits for the user to click anywhere in the window to close it.
     """
     window = rg.TurtleWindow()
-
     jump_and_move_turtle(100, 50, 200, -100)
 
     turtle = rg.SimpleTurtle('square')
-    draw_many_squares(turtle, 3, 75, 15)
+    draw_many_squares(turtle, 3, 75, 15,100)
 
     ###########################################################################
     # When the TODOs ask you to test YOUR code, put YOUR tests below this:
@@ -222,9 +221,9 @@ def try_methods_and_functions():
     turtle1.pen = rg.Pen('blue',5)
     turtle1.backward(150)
     draw_many_squares(turtle1,2,100,30,1)
-    turtle1.pen.color = rg.Pen.color('red')
+    turtle1.pen= rg.Pen('red',5)
     draw_many_squares(turtle1,10,50,15,5)
-    turtle1.pen.thickness = rg.Pen.thickness(35)
+    turtle1.pen.thickness = 35
     draw_many_squares(turtle1,8,300,60,100)
     turtle1.pen = rg.Pen('black', 3)
     turtle1.backward(200)
@@ -266,7 +265,7 @@ def try_methods_and_functions():
       #8. Draw a SQUARE whose sides are each of length 50.
     
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #    (To test it, put a statement in   main   that calls this function.)
     #
     #   NOTE: This function should ** CALL ** the
@@ -277,4 +276,4 @@ def try_methods_and_functions():
 
 
 
-    main()
+main()
